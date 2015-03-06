@@ -10,7 +10,6 @@ angular.module('shortly.links', [])
     resPromise.error(function(data){
       console.log('Error:', data);
     });
-    // $scope.data.links = [{},{},{}];
   };
   $scope.getLinks();
 });
