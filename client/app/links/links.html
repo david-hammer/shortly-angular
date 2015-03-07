@@ -1,8 +1,9 @@
 <div id='container'>
   <!-- Your html here -->
   <h1>Links</h1>
+  Search: <input ng-model="searchText.url">
   <ul>
-    <li ng-repeat="link in data.links">
+    <li ng-repeat="link in data.links | filter:searchText:strict | orderBy: '-visits' ">
       <span>{{link.code}}</span>
       <span><a ng-click="gotoLink(link.code)" href="{{link.url}}">{{link.url}}</a></span>
       <span>{{link.visits}}</span>
