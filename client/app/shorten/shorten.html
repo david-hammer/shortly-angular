@@ -1,6 +1,11 @@
 <div id='container'>
 <!-- Your code here -->
-  <p>shorten!!</p>
+  <h2>Shorten</h2>
+  <form name="form" >
+    <input type="url" name="newLink" ng-model="newLink" required />
+    <input type="submit" value="Submit" ng-click="addLink(newLink)" />
+  </form>
+  <a href="/#/links">Links</a>
 </div>
 
 

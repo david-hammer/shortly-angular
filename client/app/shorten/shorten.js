@@ -5,10 +5,13 @@ angular.module('shortly.shorten', [])
   $scope.link = {};
 
   $scope.addLink = function(url){
-    Links.addLink(url)
-      .then(function(res){
-        console.log('success');
-      });
+    if (url) {
+      Links.addLink(url)
+        .then(function(res){
+          console.log('success');
+        });
+    }
+      $scope.newLink = ''; // reset link text on submit
   };
 
 });
