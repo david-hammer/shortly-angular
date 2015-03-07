@@ -16,11 +16,19 @@ angular.module('shortly.services', [])
       url: '/api/links',
       data: {url: link}
     });
+  };
+
+  var gotoLink = function(code){
+    return $http({
+      method: 'GET',
+      url: '/api/links/' + code,
+    });
   }
 
   return {
     getLinks: getLinks,
-    addLink: addLink
+    addLink: addLink,
+    gotoLink: gotoLink
   };
 })
 

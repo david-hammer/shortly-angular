@@ -1,4 +1,12 @@
-<div ng-controller="LinksController" id='container'>
+<div id='container'>
   <!-- Your html here -->
-  <p>links controller</p>
+  <h1>Links</h1>
+  <ul>
+    <li ng-repeat="link in data.links">
+      <span>{{link.code}}</span>
+      <span><a ng-click="gotoLink(link.code)" href="{{link.url}}">{{link.url}}</a></span>
+      <span>{{link.visits}}</span>
+    </li>
+  </ul>
+  <a href="/#/shorten">Shorten</a>
 </div>

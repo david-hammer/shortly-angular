@@ -11,5 +11,8 @@ angular.module('shortly.links', [])
         console.error(error);
       });
   };
+  $scope.gotoLink = function(code){
+    Links.gotoLink(code);
+  };
   $scope.getLinks();
 });
