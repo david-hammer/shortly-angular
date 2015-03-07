@@ -7,7 +7,7 @@ angular.module('shortly', [
 ])
 .config(function($routeProvider, $httpProvider) {
   $routeProvider
-    .when('/signin', {
+    .when('/', {
       templateUrl: 'app/auth/signin.html',
       controller: 'AuthController'
     })

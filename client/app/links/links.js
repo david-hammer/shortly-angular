@@ -10,13 +10,6 @@ angular.module('shortly.links', [])
       .catch(function (error) {
         console.error(error);
       });
-    // var resPromise = $http.get('/api/links');
-    // resPromise.success(function(data){
-    //   $scope.data.links = data;
-    // });
-    // resPromise.error(function(data){
-    //   console.log('Error:', data);
-    // });
   };
   $scope.getLinks();
 });
