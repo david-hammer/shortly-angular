@@ -1,13 +1,19 @@
 <div id='container'>
   <!-- Your html here -->
   <h1>Links</h1>
-  Search: <input ng-model="searchText.url">
+  Search: <input ng-model="searchText.title">
   <ul>
     <li ng-repeat="link in data.links | filter:searchText:strict | orderBy: '-visits' ">
       <span>{{link.code}}</span>
-      <span><a ng-click="gotoLink(link.code)" href="{{link.url}}">{{link.url}}</a></span>
+      <span><a target="_blank" ng-click="gotoLink(link.code)" href="{{link.url}}">{{link.title}}</a></span>
       <span>{{link.visits}}</span>
     </li>
   </ul>
+  <pre>
+    {{data.links}}
+  </pre>
   <a href="/#/shorten">Shorten</a>
+
+
+
 </div>
